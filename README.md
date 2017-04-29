@@ -1,7 +1,7 @@
 # Gridi Framework Lists
 
 ## Install
-`brew install gridi-framework-lists`
+`bower install gridi-framework-lists`
 
 ## Licence
 
