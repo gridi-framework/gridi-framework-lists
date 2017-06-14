@@ -5,7 +5,7 @@ ul, ol, li, dl, dt, dd {
 }
 
 ul, ol {
-    margin: $ul-ol-margin;
+    @include include-element-margin($ul-ol-margin-top, $ul-ol-margin-bottom, $ul-ol-margin-left, $ul-ol-margin-right, $ul-ol-margin-for-screens);
     padding: 0 0 0 $ul-ol-padding-left;
 
     ul, ol {
@@ -22,7 +22,7 @@ ul {
 }
 
 dl {
-    margin: $dl-margin;
+    @include include-element-margin($dl-margin-top, $dl-margin-bottom, $dl-margin-left, $dl-margin-right, $dl-margin-for-screens);
 }
 
 dt {
