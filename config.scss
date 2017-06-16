@@ -15,31 +15,7 @@ $ul-ol-margin-for-screens: () !default;
     ...
 ) !default;*/
 
-$ul-ol-padding-left: 1.5em !default;
+$ul-ol-padding: 0 0 0 1.5em !default;
 
 //Li
 $li-margin: 0.3em 0 !default;
-
-//DL
-$dl-margin-top: $elements-margin-top !default;
-$dl-margin-bottom: $elements-margin-bottom !default;
-$dl-margin-left: $elements-margin-left !default;
-$dl-margin-right: $elements-margin-right !default;
-//Defined margins for each screens.
-$dl-margin-for-screens: () !default;
-/*$dl-margin-for-screens: (
-    s1: (
-        top: 20px, //Not required. Define only the margins values you want to change. Example - s2: ( top: 20px ) - change only top margin for screens greater than s2
-        bottom: 20px,
-        left: 20px,
-        right: 20px,
-    ),
-    ...
-) !default;*/
-
-
-//DT
-$dt-margin: $li-margin !default;
-
-//DD
-$dd-margin: $li-margin !default;

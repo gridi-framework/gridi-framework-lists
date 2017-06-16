@@ -6,7 +6,7 @@ ul, ol, li, dl, dt, dd {
 
 ul, ol {
     @include include-element-margin($ul-ol-margin-top, $ul-ol-margin-bottom, $ul-ol-margin-left, $ul-ol-margin-right, $ul-ol-margin-for-screens);
-    padding: 0 0 0 $ul-ol-padding-left;
+    padding: $ul-ol-padding;
 
     ul, ol {
         margin: 0;
@@ -19,17 +19,4 @@ ul, ol {
 
 ul {
     list-style-type: disc;
-}
-
-dl {
-    @include include-element-margin($dl-margin-top, $dl-margin-bottom, $dl-margin-left, $dl-margin-right, $dl-margin-for-screens);
-}
-
-dt {
-    margin: $dt-margin;
-    font-weight: bold;
-}
-
-dd {
-    margin-bottom: $dd-margin;
 }
