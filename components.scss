@@ -5,18 +5,157 @@ ul, ol, li {
 }
 
 ul, ol {
-    @include include-element-margin($ul-ol-margin-top, $ul-ol-margin-bottom, $ul-ol-margin-left, $ul-ol-margin-right, $ul-ol-margin-for-screens);
-    padding: $ul-ol-padding;
+    @if (
+        $ul-margin-top == $ol-margin-top and
+        $ul-margin-bottom == $ol-margin-bottom and
+        $ul-margin-left == $ol-margin-left and
+        $ul-margin-right == $ol-margin-right
+    ) {
+        @include margin-shorthand((
+            top: $ul-margin-top,
+            bottom: $ul-margin-bottom,
+            left: $ul-margin-left,
+            right: $ul-margin-right
+        ));
+    }
+    @if $ul-margin-for-screens == $ol-margin-for-screens {
+        @include margin-shorthand-with-screens-support((), $ul-margin-for-screens);
+    }
+    @if (
+        $ul-padding-top == $ol-padding-top and
+        $ul-padding-bottom == $ol-padding-bottom and
+        $ul-padding-left == $ol-padding-left and
+        $ul-padding-right == $ol-padding-right
+    ) {
+        @include padding-shorthand((
+            top: $ul-padding-top,
+            bottom: $ul-padding-bottom,
+            left: $ul-padding-left,
+            right: $ul-padding-right
+        ));
+    }
+    @include ul-ol-extra-style();
 
     ul, ol {
         margin: 0;
     }
 
     li {
-        margin: $li-margin;
+        @if (
+            $ul-li-margin-top == $ol-li-margin-top and
+            $ul-li-margin-bottom == $ol-li-margin-bottom and
+            $ul-li-margin-left == $ol-li-margin-left and
+            $ul-li-margin-right == $ol-li-margin-right
+        ) {
+            @include margin-shorthand((
+                top: $ul-li-margin-top,
+                bottom: $ul-li-margin-bottom,
+                left: $ul-li-margin-left,
+                right: $ul-li-margin-right
+            ));
+        }
+        @include ul-ol-li-extra-style();
     }
 }
 
 ul {
-    list-style-type: disc;
+    @if (
+        $ul-margin-top != $ol-margin-top or
+        $ul-margin-bottom != $ol-margin-bottom or
+        $ul-margin-left != $ol-margin-left or
+        $ul-margin-right != $ol-margin-right
+    ) {
+        @include margin-shorthand((
+            top: $ul-margin-top,
+            bottom: $ul-margin-bottom,
+            left: $ul-margin-left,
+            right: $ul-margin-right
+        ));
+    }
+    @if $ul-margin-for-screens != $ol-margin-for-screens {
+        @include margin-shorthand-with-screens-support((), $ul-margin-for-screens);
+    }
+    @if (
+        $ul-padding-top != $ol-padding-top or
+        $ul-padding-bottom != $ol-padding-bottom or
+        $ul-padding-left != $ol-padding-left or
+        $ul-padding-right != $ol-padding-right
+    ) {
+        @include padding-shorthand((
+            top: $ul-padding-top,
+            bottom: $ul-padding-bottom,
+            left: $ul-padding-left,
+            right: $ul-padding-right
+        ));
+    }
+    @include not-required-property(list-style-type, $ul-list-style-type);
+    @include ul-extra-style();
+
+    li {
+        @if (
+            $ul-li-margin-top != $ol-li-margin-top or
+            $ul-li-margin-bottom != $ol-li-margin-bottom or
+            $ul-li-margin-left != $ol-li-margin-left or
+            $ul-li-margin-right != $ol-li-margin-right
+        ) {
+            @include margin-shorthand((
+                top: $ul-li-margin-top,
+                bottom: $ul-li-margin-bottom,
+                left: $ul-li-margin-left,
+                right: $ul-li-margin-right
+            ));
+        }
+        @include ul-li-extra-style();
+    }
+}
+
+ol {
+    @if (
+        $ul-margin-top != $ol-margin-top or
+        $ul-margin-bottom != $ol-margin-bottom or
+        $ul-margin-left != $ol-margin-left or
+        $ul-margin-right != $ol-margin-right
+    ) {
+        @include margin-shorthand((
+            top: $ol-margin-top,
+            bottom: $ol-margin-bottom,
+            left: $ol-margin-left,
+            right: $ol-margin-right
+        ));
+    }
+    @if $ul-margin-for-screens != $ol-margin-for-screens {
+        @include margin-shorthand-with-screens-support((), $ol-margin-for-screens);
+    }
+    @if (
+        $ul-padding-top != $ol-padding-top or
+        $ul-padding-bottom != $ol-padding-bottom or
+        $ul-padding-left != $ol-padding-left or
+        $ul-padding-right != $ol-padding-right
+    ) {
+        @include padding-shorthand((
+            top: $ol-padding-top,
+            bottom: $ol-padding-bottom,
+            left: $ol-padding-left,
+            right: $ol-padding-right
+        ));
+    }
+    @include not-required-property(list-style-type, $ol-list-style-type);
+    @include ol-extra-style();
+
+    li {
+        @if (
+            $ul-li-margin-top != $ol-li-margin-top or
+            $ul-li-margin-bottom != $ol-li-margin-bottom or
+            $ul-li-margin-left != $ol-li-margin-left or
+            $ul-li-margin-right != $ol-li-margin-right
+        ) {
+            @include margin-shorthand((
+                top: $ol-li-margin-top,
+                bottom: $ol-li-margin-bottom,
+                left: $ol-li-margin-left,
+                right: $ol-li-margin-right
+            ));
+        }
+        @include ol-li-extra-style();
+    }
 }

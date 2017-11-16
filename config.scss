@@ -1,11 +1,16 @@
-//Ul | Ol
-$ul-ol-margin-top: $elements-margin-top !default;
-$ul-ol-margin-bottom: $elements-margin-bottom !default;
-$ul-ol-margin-left: $elements-margin-left !default;
-$ul-ol-margin-right: $elements-margin-right !default;
+//Ul Ol
+@mixin ul-ol-extra-style() {}
+@mixin ul-ol-li-extra-style() {}
+
+//Ul
+//Margins
+$ul-margin-top: $elements-margin-top !default;
+$ul-margin-bottom: $elements-margin-bottom !default;
+$ul-margin-left: $elements-margin-left !default;
+$ul-margin-right: $elements-margin-right !default;
 //Defined margins for each screens.
-$ul-ol-margin-for-screens: () !default;
-/*$ul-ol-margin-for-screens: (
+$ul-margin-for-screens: $elements-margin-for-screens !default;
+/*$ul-margin-for-screens: (
     s1: (
         top: 20px, //Not required. Define only the margins values you want to change. Example - s2: ( top: 20px ) - change only top margin for screens greater than s2
         bottom: 20px,
@@ -15,7 +20,64 @@ $ul-ol-margin-for-screens: () !default;
     ...
 ) !default;*/
 
-$ul-ol-padding: 0 0 0 1.5em !default;
+//Paddings
+$ul-padding-top: 0 !default;
+$ul-padding-bottom: 0 !default;
+$ul-padding-left: 1.5em !default;
+$ul-padding-right: 0 !default;
 
-//Li
-$li-margin: 0.3em 0 !default;
+//List style type
+$ul-list-style-type: disc !default;
+
+//Extra style
+@mixin ul-extra-style() {}
+
+//UL LI
+//Margins
+$ul-li-margin-top: 0.3em !default;
+$ul-li-margin-bottom: 0.3em !default;
+$ul-li-margin-left: 0 !default;
+$ul-li-margin-right: 0 !default;
+
+//Extra style
+@mixin ul-li-extra-style() {}
+
+//Ol
+//Margins
+$ol-margin-top: $elements-margin-top !default;
+$ol-margin-bottom: $elements-margin-bottom !default;
+$ol-margin-left: $elements-margin-left !default;
+$ol-margin-right: $elements-margin-right !default;
+//Defined margins for each screens.
+$ol-margin-for-screens: $elements-margin-for-screens !default;
+/*$ol-margin-for-screens: (
+    s1: (
+        top: 20px, //Not required. Define only the margins values you want to change. Example - s2: ( top: 20px ) - change only top margin for screens greater than s2
+        bottom: 20px,
+        left: 20px,
+        right: 20px,
+    ),
+    ...
+) !default;*/
+
+//Paddings
+$ol-padding-top: 0 !default;
+$ol-padding-bottom: 0 !default;
+$ol-padding-left: 1.5em !default;
+$ol-padding-right: 0 !default;
+
+//List style type
+$ol-list-style-type: null !default;
+
+//Extra style
+@mixin ol-extra-style() {}
+
+//OL LI
+//Margins
+$ol-li-margin-top: 0.3em !default;
+$ol-li-margin-bottom: 0.3em !default;
+$ol-li-margin-left: 0 !default;
+$ol-li-margin-right: 0 !default;
+
+//Extra style
+@mixin ol-li-extra-style() {}
