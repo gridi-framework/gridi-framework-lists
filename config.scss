@@ -24,11 +24,11 @@ $ul-list-style-type: disc !default;
 
 //UL LI
 //Margins
-$ul-li-margin-top: $list-elements-item-margin-top !default;
-$ul-li-margin-bottom: $list-elements-item-margin-bottom !default;
-$ul-li-margin-left: $list-elements-item-margin-left !default;
-$ul-li-margin-right: $list-elements-item-margin-right !default;
-$ul-li-margin-for-screens: $list-elements-item-margin-for-screens !default;
+$ul-li-margin-top: $list-item-elements-margin-top !default;
+$ul-li-margin-bottom: $list-item-elements-margin-bottom !default;
+$ul-li-margin-left: $list-item-elements-margin-left !default;
+$ul-li-margin-right: $list-item-elements-margin-right !default;
+$ul-li-margin-for-screens: $list-item-elements-margin-for-screens !default;
 
 //Extra style
 @mixin ul-li-extra-style() {}
@@ -55,11 +55,11 @@ $ol-list-style-type: null !default;
 
 //OL LI
 //Margins
-$ol-li-margin-top: $list-elements-item-margin-top !default;
-$ol-li-margin-bottom: $list-elements-item-margin-bottom !default;
-$ol-li-margin-left: $list-elements-item-margin-left !default;
-$ol-li-margin-right: $list-elements-item-margin-right !default;
-$ol-li-margin-for-screens: $list-elements-item-margin-for-screens !default;
+$ol-li-margin-top: $list-item-elements-margin-top !default;
+$ol-li-margin-bottom: $list-item-elements-margin-bottom !default;
+$ol-li-margin-left: $list-item-elements-margin-left !default;
+$ol-li-margin-right: $list-item-elements-margin-right !default;
+$ol-li-margin-for-screens: $list-item-elements-margin-for-screens !default;
 
 //Extra style
 @mixin ol-li-extra-style() {}
