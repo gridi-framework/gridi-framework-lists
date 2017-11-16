@@ -54,6 +54,9 @@ ul, ol {
                 right: $ul-li-margin-right
             ));
         }
+        @if $ul-li-margin-for-screens == $ol-li-margin-for-screens {
+            @include margin-shorthand-with-screens-support((), $ul-li-margin-for-screens);
+        }
         @include ul-ol-li-extra-style();
     }
 }

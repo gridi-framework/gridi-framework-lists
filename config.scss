@@ -8,17 +8,7 @@ $ul-margin-top: $elements-margin-top !default;
 $ul-margin-bottom: $elements-margin-bottom !default;
 $ul-margin-left: $elements-margin-left !default;
 $ul-margin-right: $elements-margin-right !default;
-//Defined margins for each screens.
 $ul-margin-for-screens: $elements-margin-for-screens !default;
-/*$ul-margin-for-screens: (
-    s1: (
-        top: 20px, //Not required. Define only the margins values you want to change. Example - s2: ( top: 20px ) - change only top margin for screens greater than s2
-        bottom: 20px,
-        left: 20px,
-        right: 20px,
-    ),
-    ...
-) !default;*/
 
 //Paddings
 $ul-padding-top: 0 !default;
@@ -34,10 +24,11 @@ $ul-list-style-type: disc !default;
 
 //UL LI
 //Margins
-$ul-li-margin-top: 0.3em !default;
-$ul-li-margin-bottom: 0.3em !default;
-$ul-li-margin-left: 0 !default;
-$ul-li-margin-right: 0 !default;
+$ul-li-margin-top: $list-elements-item-margin-top !default;
+$ul-li-margin-bottom: $list-elements-item-margin-bottom !default;
+$ul-li-margin-left: $list-elements-item-margin-left !default;
+$ul-li-margin-right: $list-elements-item-margin-right !default;
+$ul-li-margin-for-screens: $list-elements-item-margin-for-screens !default;
 
 //Extra style
 @mixin ul-li-extra-style() {}
@@ -48,17 +39,7 @@ $ol-margin-top: $elements-margin-top !default;
 $ol-margin-bottom: $elements-margin-bottom !default;
 $ol-margin-left: $elements-margin-left !default;
 $ol-margin-right: $elements-margin-right !default;
-//Defined margins for each screens.
 $ol-margin-for-screens: $elements-margin-for-screens !default;
-/*$ol-margin-for-screens: (
-    s1: (
-        top: 20px, //Not required. Define only the margins values you want to change. Example - s2: ( top: 20px ) - change only top margin for screens greater than s2
-        bottom: 20px,
-        left: 20px,
-        right: 20px,
-    ),
-    ...
-) !default;*/
 
 //Paddings
 $ol-padding-top: 0 !default;
@@ -74,10 +55,11 @@ $ol-list-style-type: null !default;
 
 //OL LI
 //Margins
-$ol-li-margin-top: 0.3em !default;
-$ol-li-margin-bottom: 0.3em !default;
-$ol-li-margin-left: 0 !default;
-$ol-li-margin-right: 0 !default;
+$ol-li-margin-top: $list-elements-item-margin-top !default;
+$ol-li-margin-bottom: $list-elements-item-margin-bottom !default;
+$ol-li-margin-left: $list-elements-item-margin-left !default;
+$ol-li-margin-right: $list-elements-item-margin-right !default;
+$ol-li-margin-for-screens: $list-elements-item-margin-for-screens !default;
 
 //Extra style
 @mixin ol-li-extra-style() {}
