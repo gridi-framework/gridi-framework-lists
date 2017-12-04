@@ -34,7 +34,9 @@ ul, ol {
             right: $ul-padding-right
         ));
     }
-    @include ul-ol-extra-style();
+    @if mixin-exists(ul-ol-extra-style) {
+        @include ul-ol-extra-style();
+    }
 
     ul, ol {
         margin: 0;
@@ -57,7 +59,9 @@ ul, ol {
         @if $ul-li-margin-for-screens == $ol-li-margin-for-screens {
             @include margin-shorthand-with-screens-support((), $ul-li-margin-for-screens);
         }
-        @include ul-ol-li-extra-style();
+        @if mixin-exists(ul-ol-li-extra-style) {
+            @include ul-ol-li-extra-style();
+        }
     }
 }
 
@@ -92,7 +96,9 @@ ul {
         ));
     }
     @include not-required-property(list-style-type, $ul-list-style-type);
-    @include ul-extra-style();
+    @if mixin-exists(ul-extra-style) {
+        @include ul-extra-style();
+    }
 
     li {
         @if (
@@ -108,7 +114,9 @@ ul {
                 right: $ul-li-margin-right
             ));
         }
-        @include ul-li-extra-style();
+        @if mixin-exists(ul-li-extra-style) {
+            @include ul-li-extra-style();
+        }
     }
 }
 
@@ -143,7 +151,9 @@ ol {
         ));
     }
     @include not-required-property(list-style-type, $ol-list-style-type);
-    @include ol-extra-style();
+    @if mixin-exists(ol-extra-style) {
+        @include ol-extra-style();
+    }
 
     li {
         @if (
@@ -159,6 +169,8 @@ ol {
                 right: $ol-li-margin-right
             ));
         }
-        @include ol-li-extra-style();
+        @if mixin-exists(ol-li-extra-style) {
+            @include ol-li-extra-style();
+        }
     }
 }

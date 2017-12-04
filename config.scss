@@ -1,6 +1,6 @@
 //Ul Ol
-@mixin ul-ol-extra-style() {}
-@mixin ul-ol-li-extra-style() {}
+//@mixin ul-ol-extra-style() {} //Create this mixin before import module when you want add some special style for element
+//@mixin ul-ol-li-extra-style() {} //Create this mixin before import module when you want add some special style for element
 
 //Ul
 //Margins
@@ -20,7 +20,7 @@ $ul-padding-right: 0 !default;
 $ul-list-style-type: disc !default;
 
 //Extra style
-@mixin ul-extra-style() {}
+//@mixin ul-extra-style() {} //Create this mixin before import module when you want add some special style for element
 
 //UL LI
 //Margins
@@ -31,7 +31,7 @@ $ul-li-margin-right: $list-item-elements-margin-right !default;
 $ul-li-margin-for-screens: $list-item-elements-margin-for-screens !default;
 
 //Extra style
-@mixin ul-li-extra-style() {}
+//@mixin ul-li-extra-style() {} //Create this mixin before import module when you want add some special style for element
 
 //Ol
 //Margins
@@ -51,7 +51,7 @@ $ol-padding-right: 0 !default;
 $ol-list-style-type: null !default;
 
 //Extra style
-@mixin ol-extra-style() {}
+//@mixin ol-extra-style() {} //Create this mixin before import module when you want add some special style for element
 
 //OL LI
 //Margins
@@ -62,4 +62,4 @@ $ol-li-margin-right: $list-item-elements-margin-right !default;
 $ol-li-margin-for-screens: $list-item-elements-margin-for-screens !default;
 
 //Extra style
-@mixin ol-li-extra-style() {}
+//@mixin ol-li-extra-style() {} //Create this mixin before import module when you want add some special style for element
